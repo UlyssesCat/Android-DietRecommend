@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="QJExpandedListView">
+        <attr name="header_view_text_color" format="reference|color"/>
+        <attr name="footer_view_text_color" format="reference|color"/>
+        <attr name="header_view_text_size" format="dimension"/>
+        <attr name="footer_view_text_size" format="dimension"/>
+        <attr name="header_view_bgd_color" format="reference|color"/>
+        <attr name="footer_view_bgd_color" format="reference|color"/>
+        <attr name="refresh_min_height" format="dimension"/>
+        <attr name="refresh_max_height" format="dimension"/>
+        <attr name="refresh_progressbar_size" format="dimension"/>
+        <attr name="auto_load" format="boolean"/>
+        <attr name="refresh_enable" format="boolean"/>
+        <attr name="load_more_enable" format="boolean"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="RulerView">
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="lineColor" format="color" />
+        <attr name="lineSpaceWidth" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineMaxHeight" format="dimension" />
+        <attr name="lineMidHeight" format="dimension" />
+        <attr name="lineMinHeight" format="dimension" />
+        <attr name="textMarginTop" format="dimension" />
+        <attr name="alphaEnable" format="boolean" />
+        <attr name="minValue" format="float"/>
+        <attr name="maxValue" format="float"/>
+        <attr name="selectorValue" format="float"/>
+        <attr name="perValue" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="circleProgressBar">
+        <attr name="circleWidth" format="dimension" />
+        <attr name="betaAngle" format="integer" />
+        <attr name="firstColor" format="color" />
+        <attr name="secondColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="nodeProgress">
+        <!--节点默认颜色-->
+        <attr name="node_color" format="color" />
+        <!--节点进度颜色-->
+        <attr name="node_progresscolor" format="color" />
+        <!--进度条默认颜色-->
+        <attr name="node_bar" format="color" />
+        <!--进度条默认颜色-->
+        <attr name="node_progress_bar" format="color" />
+        <!--文字提示颜色-->
+        <attr name="node_tip" format="color" />
+        <!--进度提示颜色-->
+        <attr name="node_progress_tip" format="color" />
+        <!-- 几点个数-->
+        <attr name="node_num" format="integer" />
+        <!-- 当前进度-->
+        <attr name="node_current" format="integer" />
+        <!--节点半径-->
+        <attr name="node_radio" format="dimension" />
+
+        <!-- 节点背景图-->
+        <attr name="node_bg" format="reference" />
+        <attr name="node_progress_bg" format="reference" />
+
+    </declare-styleable>
+</resources>

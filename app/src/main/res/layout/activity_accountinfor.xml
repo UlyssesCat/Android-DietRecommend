@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_acconutinfor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <View
+            android:id="@+id/nac_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_25"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_23"
+            android:onClick="toSetting"
+            android:background="@drawable/back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginStart="@dimen/dp_80"
+            android:text="我的资料"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24" />
+        <TextView
+            android:id="@+id/time"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:text=""/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_70"
+        android:background="#F0F3F6"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/wrap_layout">
+
+            <LinearLayout
+                style="@style/item_layout"
+                android:onClick="toChangePicture">
+
+                <TextView
+                    style="@style/usertext"
+                    android:text="头像" />
+                <ImageView
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:src="@mipmap/launcher_round"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/wrap_layout">
+            <LinearLayout style="@style/item_layout"
+                android:onClick="toChangeName">
+
+                <TextView
+                    style="@style/usertext"
+                    android:text="用户名" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:text="人生如此儿戏"
+                    />
+            </LinearLayout>
+
+            <View style="@style/bg_line" />
+
+            <LinearLayout style="@style/item_layout"
+                android:onClick="changeTime">
+                <TextView
+                    style="@style/usertext"
+                    android:text="生日" />
+                <TextView
+                    android:id="@+id/birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:text="1997.10.30"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/wrap_layout">
+
+            <LinearLayout style="@style/item_layout"
+                android:onClick="toChangePassword">
+
+                <TextView
+                    style="@style/usertext"
+                    android:text="修改密码" />
+
+                <ImageView style="@style/img_arrow" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

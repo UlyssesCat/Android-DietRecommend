@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <View
+            android:id="@+id/nac_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_25"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_23"
+            android:background="@drawable/back"
+            android:onClick="toMain"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_80"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_70"
+        android:background="#F0F3F6"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/wrap_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/item_layout"
+                    android:orientation="horizontal"
+                    android:onClick="toChangePicture">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:src="@mipmap/launcher_round" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_20"
+                            android:text="人生如此儿戏" />
+
+                        <TextView
+                            android:id="@+id/level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_20"
+                            android:text="lv.1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/bg_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@drawable/layout_selector"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/anumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="动态" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@drawable/layout_selector"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/cnumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="关注" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@drawable/layout_selector"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fnumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="粉丝" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/wrap_layout">
+
+            <LinearLayout style="@style/item_layout">
+
+                <TextView
+                    style="@style/usertext"
+                    android:text="我的资料"
+                    android:onClick="toSelfInfor"/>
+
+                <ImageView style="@style/img_arrow" />
+            </LinearLayout>
+
+            <View style="@style/bg_line" />
+
+
+            <LinearLayout
+                style="@style/item_layout"
+                android:onClick="toAccountInfor">
+
+                <TextView
+                    style="@style/usertext"
+                    android:text="账户管理" />
+
+                <ImageView style="@style/img_arrow" />
+            </LinearLayout>
+
+            <View style="@style/bg_line" />
+
+            <LinearLayout style="@style/item_layout"
+                android:onClick="toFood">
+
+                <TextView
+                    style="@style/usertext"
+                    android:text="食物详情" />
+
+                <ImageView style="@style/img_arrow" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/wrap_layout">
+
+            <LinearLayout
+                style="@style/item_layout"
+                android:onClick="toProtocol">
+
+                <TextView
+                    style="@style/usertext"
+                    android:text="用户协议" />
+
+                <ImageView style="@style/img_arrow" />
+            </LinearLayout>
+
+            <View style="@style/bg_line" />
+
+            <LinearLayout
+                style="@style/item_layout"
+                android:onClick="toAbout">
+
+                <TextView
+                    style="@style/usertext"
+                    android:text="关于我们" />
+
+                <ImageView style="@style/img_arrow" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/wrap_layout"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10">
+
+            <LinearLayout
+                style="@style/item_layout"
+                android:onClick="LogoutDialog">
+
+                <TextView
+                    style="@style/warningtext"
+                    android:text="退出登录" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

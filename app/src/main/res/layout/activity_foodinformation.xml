@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:lh2="http://schemas.android.com/apk/res-auto"
+    xmlns:node="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_foodinformation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/top1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_25"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_23"
+            android:background="@drawable/back"
+            android:onClick="toSetting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_80"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="食物详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_70"
+        android:background="@color/gray_light"
+        android:orientation="vertical">
+
+        <com.example.helloworld.fadingscroll.FadingScrollView
+            android:id="@+id/nac_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/medium1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:background="@drawable/bg_item_shape"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/medium2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_150"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/food"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_50"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:text="豆浆"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_20" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_50"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="绿色食品"
+                                android:textSize="@dimen/sp_18" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_5"
+                                android:text="推荐食用"
+                                android:textSize="@dimen/sp_16" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="@dimen/dp_100"
+                        android:layout_marginStart="@dimen/dp_50"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:src="@mipmap/launcher_round" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_above="@id/medium3"
+                    android:background="@drawable/bottom_shadow" />
+
+                <LinearLayout
+                    android:id="@+id/medium3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_200"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_50"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/hot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:text="热量"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_20" />
+
+                        <TextView
+                            android:id="@+id/hotvalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_60"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:text="0KJ"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_20" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_50"
+                        android:orientation="vertical">
+
+                        <com.example.helloworld.information.NodeProgressView
+                            android:id="@+id/node_progress"
+                            android:layout_width="@dimen/dp_200"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
+                            node:node_bg="@mipmap/rb_nomal"
+                            node:node_current="1"
+                            node:node_num="3"
+                            node:node_progress_bg="@mipmap/rb_checked"
+                            node:node_progresscolor="#0a72da" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_above="@id/medium4"
+                    android:background="@drawable/bottom_shadow" />
+
+                <LinearLayout
+                    android:id="@+id/medium4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_250"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/nutrition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_50"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:text="营养"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_20" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_30"
+                            android:text="(单位:每100克)"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_15" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:orientation="vertical">
+
+                            <com.example.helloworld.information.CircleProgressBar
+                                android:id="@+id/f1"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                lh2:circleWidth="10dp"
+                                lh2:firstColor="#d3d3d3"
+                                lh2:secondColor="@color/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:text="蛋白质" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:text="2.6克" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_100"
+                            android:layout_height="@dimen/dp_150"
+                            android:orientation="vertical">
+
+                            <com.example.helloworld.information.CircleProgressBar
+                                android:id="@+id/f2"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                lh2:circleWidth="10dp"
+                                lh2:firstColor="#d3d3d3"
+                                lh2:secondColor="@color/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:text="脂肪" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:text="0.3克" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_100"
+                            android:layout_height="@dimen/dp_150"
+                            android:orientation="vertical">
+
+                            <com.example.helloworld.information.CircleProgressBar
+                                android:id="@+id/f3"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                lh2:circleWidth="10dp"
+                                lh2:firstColor="#d3d3d3"
+                                lh2:secondColor="@color/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:text="碳水化合物" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:text="25.9克" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_above="@id/medium5"
+                    android:background="@drawable/bottom_shadow" />
+
+                <LinearLayout
+                    android:id="@+id/medium5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_300"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/speciallabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_40"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:text="其他含量"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_20" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.example.helloworld.fadingscroll.FadingScrollView>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

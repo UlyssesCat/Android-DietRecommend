@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.helloworld.fadingscroll.FadingScrollView
+        android:id="@+id/nac_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E8E8E8"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:background="@drawable/bg_item_shape"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/item_layout"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:src="@mipmap/launcher_round" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/username1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_20"
+                            android:text="人生如此儿戏" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dp_80">
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="19.05.11 15:33" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_above="@id/share2"
+                    android:background="@drawable/bottom_shadow" />
+
+                <LinearLayout
+                    android:id="@+id/share2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:src="@mipmap/launcher_round" />
+
+                        <TextView
+                            android:id="@+id/R1"
+                            style="@style/foodname"
+                            android:gravity="center"
+                            android:text="米饭" />
+
+                        <TextView
+                            android:id="@+id/K1"
+                            android:gravity="center"
+                            style="@style/foodweight"
+                            android:text="100g" />
+
+                        <TextView
+                            android:id="@+id/C1"
+                            android:gravity="center"
+                            style="@style/foodcalory"
+                            android:text="1000J" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:src="@mipmap/launcher_round" />
+
+                        <TextView
+                            android:id="@+id/R2"
+                            style="@style/foodname"
+                            android:gravity="center"
+                            android:text="米饭" />
+
+                        <TextView
+                            android:id="@+id/K2"
+                            style="@style/foodweight"
+                            android:gravity="center"
+                            android:text="100g" />
+
+                        <TextView
+                            android:id="@+id/C2"
+                            android:gravity="center"
+                            style="@style/foodcalory"
+                            android:text="1000J" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_40"
+                            android:layout_height="@dimen/dp_40"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:src="@mipmap/launcher_round" />
+
+                        <TextView
+                            android:id="@+id/R3"
+                            style="@style/foodname"
+                            android:gravity="center"
+                            android:text="米饭" />
+
+                        <TextView
+                            android:id="@+id/K3"
+                            style="@style/foodweight"
+                            android:gravity="center"
+                            android:text="100g" />
+
+                        <TextView
+                            android:id="@+id/C3"
+                            style="@style/foodcalory"
+                            android:gravity="center"
+                            android:text="1000J" />
+
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </com.example.helloworld.fadingscroll.FadingScrollView>
+
+
+</RelativeLayout>

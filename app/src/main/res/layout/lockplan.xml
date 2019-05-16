@@ -1,0 +1,563 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="horizontal"
+    android:scrollbars="none">
+
+    <FrameLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp">
+
+        <View
+            android:id="@+id/nac_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_25"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_23"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_80"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="方案选取"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.helloworld.fadingscroll.FadingScrollView
+            android:id="@+id/nac_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/bg_item_shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="推荐方案" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:src="@mipmap/launcher_round" />
+
+                    <TextView
+                        android:id="@+id/R1"
+                        style="@style/foodname"
+                        android:text="米饭" />
+
+                    <TextView
+                        android:id="@+id/K1"
+                        style="@style/foodweight"
+                        android:text="100g" />
+
+                    <TextView
+                        android:id="@+id/C1"
+                        style="@style/foodcalory"
+                        android:text="1000J" />
+
+                    <Button
+                        android:id="@+id/B1"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_60"
+                        android:text="更换" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:src="@mipmap/launcher_round" />
+
+                    <TextView
+                        android:id="@+id/R2"
+                        style="@style/foodname"
+                        android:text="米饭" />
+
+                    <TextView
+                        android:id="@+id/K2"
+                        style="@style/foodweight"
+                        android:text="100g" />
+
+                    <TextView
+                        android:id="@+id/C2"
+                        style="@style/foodcalory"
+                        android:text="1000J" />
+
+
+                    <Button
+                        android:id="@+id/B2"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_60"
+                        android:text="更换" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:src="@mipmap/launcher_round" />
+
+                    <TextView
+                        android:id="@+id/R3"
+                        style="@style/foodname"
+                        android:text="米饭" />
+
+                    <TextView
+                        android:id="@+id/K3"
+                        style="@style/foodweight"
+                        android:text="100g" />
+
+                    <TextView
+                        android:id="@+id/C3"
+                        style="@style/foodcalory"
+                        android:text="1000J" />
+
+
+                    <Button
+                        android:id="@+id/B3"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:text="更换" />
+                </LinearLayout>
+
+                <View style="@style/divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_40"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_40"
+                            android:text="热量总计" />
+
+                        <TextView
+                            android:id="@+id/TotalCal1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:text="2000kJ" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_80">
+
+                        <Button
+
+                            android:layout_width="@dimen/dp_60"
+                            android:layout_height="@dimen/dp_40"
+                            android:text="选取" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/bg_item_shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="备选方案1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:src="@mipmap/launcher_round" />
+
+                    <TextView
+                        android:id="@+id/R4"
+                        style="@style/foodname"
+                        android:text="米饭" />
+
+                    <TextView
+                        android:id="@+id/K4"
+                        style="@style/foodweight"
+                        android:text="100g" />
+
+                    <TextView
+                        android:id="@+id/C4"
+                        style="@style/foodcalory"
+                        android:text="1000J" />
+
+
+                    <Button
+                        android:id="@+id/B4"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:text="更换" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:src="@mipmap/launcher_round" />
+
+                    <TextView
+                        android:id="@+id/R5"
+                        style="@style/foodname"
+                        android:text="米饭" />
+
+                    <TextView
+                        android:id="@+id/K5"
+                        style="@style/foodweight"
+                        android:text="100g" />
+
+                    <TextView
+                        android:id="@+id/C5"
+                        style="@style/foodcalory"
+                        android:text="1000J" />
+
+
+                    <Button
+                        android:id="@+id/B5"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_60"
+                        android:text="更换" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:src="@mipmap/launcher_round" />
+
+                    <TextView
+                        android:id="@+id/R6"
+                        style="@style/foodname"
+                        android:text="米饭" />
+
+                    <TextView
+                        android:id="@+id/K6"
+                        style="@style/foodweight"
+                        android:text="100g" />
+
+                    <TextView
+                        android:id="@+id/C6"
+                        style="@style/foodcalory"
+                        android:text="1000J" />
+
+
+                    <Button
+                        android:id="@+id/B6"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_60"
+                        android:text="更换" />
+                </LinearLayout>
+
+                <View style="@style/divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_40"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_40"
+                            android:text="热量总计" />
+
+                        <TextView
+                            android:id="@+id/TotalCal2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:text="2000kJ" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_80">
+
+                        <Button
+                            android:layout_width="@dimen/dp_60"
+                            android:layout_height="@dimen/dp_40"
+                            android:text="选取" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/bg_item_shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="备选方案2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:src="@mipmap/launcher_round" />
+
+                    <TextView
+                        android:id="@+id/R7"
+                        style="@style/foodname"
+                        android:text="米饭" />
+
+                    <TextView
+                        android:id="@+id/K7"
+                        style="@style/foodweight"
+                        android:text="100g" />
+
+                    <TextView
+                        android:id="@+id/C7"
+                        style="@style/foodcalory"
+                        android:text="1000J" />
+
+                    <Button
+                        android:id="@+id/B7"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_60"
+                        android:text="更换" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:src="@mipmap/launcher_round" />
+
+                    <TextView
+                        android:id="@+id/R8"
+                        style="@style/foodname"
+                        android:text="米饭" />
+
+                    <TextView
+                        android:id="@+id/K8"
+                        style="@style/foodweight"
+                        android:text="100g" />
+
+                    <TextView
+                        android:id="@+id/C8"
+                        style="@style/foodcalory"
+                        android:text="1000J" />
+
+
+                    <Button
+                        android:id="@+id/B8"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_60"
+                        android:text="更换" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:src="@mipmap/launcher_round" />
+
+                    <TextView
+                        android:id="@+id/R9"
+                        style="@style/foodname"
+                        android:text="米饭" />
+
+                    <TextView
+                        android:id="@+id/K9"
+                        style="@style/foodweight"
+                        android:text="100g" />
+
+                    <TextView
+                        android:id="@+id/C9"
+                        style="@style/foodcalory"
+                        android:text="1000J" />
+
+
+                    <Button
+                        android:id="@+id/B9"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_60"
+                        android:text="更换" />
+                </LinearLayout>
+
+                <View style="@style/divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_40"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_40"
+                            android:text="热量总计" />
+
+                        <TextView
+                            android:id="@+id/TotalCal3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:text="2000kJ" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginRight="@dimen/dp_80">
+
+                        <Button
+                            android:layout_width="@dimen/dp_60"
+                            android:layout_height="@dimen/dp_40"
+                            android:text="选取" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.example.helloworld.fadingscroll.FadingScrollView>
+    </LinearLayout>
+
+</LinearLayout>
+
+
